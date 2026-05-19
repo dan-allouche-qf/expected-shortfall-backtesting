@@ -158,7 +158,7 @@ The full numerical write-up is in [`docs/results.md`](docs/results.md) and in th
 - [**docs/methodology.md**](docs/methodology.md) — notation, the eleven backtests in detail, the forecasting models (AR(1)-GARCH(1,1)-$t$, GJR-GARCH, LSTM-Quantile, MDN-LSTM), and the Monte Carlo design.
 - [**docs/results.md**](docs/results.md) — headline numbers, tables, and discussion for each of the six notebooks.
 - [**docs/reproducibility.md**](docs/reproducibility.md) — install, CLI, frozen reference data, regression-test setup, determinism caveats.
-- [**references/`du_escanciano_2015_working_paper.pdf`**](references/du_escanciano_2015_working_paper.pdf) — the source paper this project replicates.
+- [**references/README.md**](references/README.md) — citation and DOI for the source paper this project replicates (Du and Escanciano, *Management Science* 2017).
 
 ## Architecture
 
