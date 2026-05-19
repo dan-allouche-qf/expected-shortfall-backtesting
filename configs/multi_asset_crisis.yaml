@@ -1,0 +1,46 @@
+# Multi-asset, multi-crisis evaluation of the Du-Escanciano + battery
+# pipeline. For each (asset, period) the in-sample window is the
+# ``in_sample_years`` years ending the day before ``oos_start``.
+
+data:
+  start: "1995-01-01"
+  end: "2024-12-31"
+
+assets:
+  - name: SPX
+    ticker: "^GSPC"
+  - name: NDX
+    ticker: "^NDX"
+  - name: FTSE
+    ticker: "^FTSE"
+  - name: DAX
+    ticker: "^GDAXI"
+  - name: Nikkei
+    ticker: "^N225"
+
+backtest:
+  alpha_es: 0.10
+  alpha_var: 0.05
+  m: 5
+
+in_sample_years: 5
+
+periods:
+  - name: Dotcom
+    oos_start: "2000-04-01"
+    oos_end: "2002-12-31"
+  - name: GFC
+    oos_start: "2007-07-01"
+    oos_end: "2009-06-30"
+  - name: COVID
+    oos_start: "2020-01-01"
+    oos_end: "2021-12-31"
+  - name: Inflation_2022
+    oos_start: "2022-01-01"
+    oos_end: "2022-12-31"
+  - name: SVB
+    oos_start: "2023-03-01"
+    oos_end: "2023-09-30"
+
+output:
+  results_dir: results/multi_asset

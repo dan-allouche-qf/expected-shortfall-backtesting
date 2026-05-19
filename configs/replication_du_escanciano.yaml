@@ -1,0 +1,35 @@
+# Replication of Du and Escanciano (2017) on the S&P 500.
+#
+# Period 1 reproduces the paper's empirical application (1997-2009 with the
+# 2008 financial crisis as the OOS window). Period 2 is the original
+# COVID-19 extension (2010-2021). Both fit AR(1)-GARCH(1,1)-t in-sample and
+# evaluate the four basic backtests plus the robust MU_ES / MC_ES variants
+# on the OOS window.
+
+data:
+  asset: sp500
+  start: "1997-01-01"
+  end: "2024-12-31"
+
+backtest:
+  alpha_es: 0.10
+  alpha_var: 0.05
+  m: 5
+
+periods:
+  - name: "Period 1 - 2008 Financial Crisis"
+    is_start: "1997-01-01"
+    is_end: "2007-06-30"
+    oos_end: "2009-06-30"
+    figure_zoom_date: "2008-09-15"
+    figure_zoom_label: "Lehman Brothers\n15 Sep 2008"
+  - name: "Period 2 - COVID-19 Crash"
+    is_start: "2010-01-01"
+    is_end: "2019-12-31"
+    oos_end: "2021-12-31"
+    figure_zoom_date: "2020-03-16"
+    figure_zoom_label: "COVID Crash\n16 Mar 2020"
+
+output:
+  figures_dir: results/figures
+  tables_dir: results/tables

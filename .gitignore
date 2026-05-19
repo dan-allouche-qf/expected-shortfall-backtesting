@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.tox/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.snm
+*.nav
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+
+# Project data and outputs
+data/cache/*
+!data/cache/.gitkeep
+results/*
+!results/.gitkeep
+models_ckpt/
+*.pt
+*.pth
+*.ckpt
+
+# Secrets / local environment
+.env
+.env.local
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.iml
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# iCloud
+.icloud
+*.icloud
+
+# R
+.Rhistory
+.RData
+.Ruserdata
