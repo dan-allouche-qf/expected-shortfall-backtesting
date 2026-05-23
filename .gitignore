@@ -11,6 +11,7 @@ dist/
 .eggs/
 .tox/
 .venv/
+.venv-audit/
 venv/
 .pytest_cache/
 .mypy_cache/
